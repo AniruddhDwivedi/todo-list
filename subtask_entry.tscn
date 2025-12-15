@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bju3gt00yqv00"]
+
+[ext_resource type="Script" uid="uid://tdtyhaaor47c" path="res://subtask_entry.gd" id="1_eva00"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qptvr"]
+content_margin_left = 0.0
+content_margin_top = 5.0
+content_margin_right = 0.0
+content_margin_bottom = 5.0
+bg_color = Color(0.24313726, 0.24313726, 0.24313726, 0.6)
+corner_detail = 5
+
+[node name="Menu" type="PanelContainer"]
+custom_minimum_size = Vector2(250, 0)
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qptvr")
+script = ExtResource("1_eva00")
+
+[node name="Layout" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Heading" type="Label" parent="Layout"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Subtask Name:"
+
+[node name="TaskEntry" type="LineEdit" parent="Layout"]
+custom_minimum_size = Vector2(115, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[connection signal="text_changed" from="Layout/TaskEntry" to="." method="_on_task_entry_text_changed"]

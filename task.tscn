@@ -1,0 +1,237 @@
+[gd_scene load_steps=27 format=3 uid="uid://bqpc75byt6xel"]
+
+[ext_resource type="Script" uid="uid://bkot05uaqnbtc" path="res://task.gd" id="1_3qm7i"]
+[ext_resource type="PackedScene" uid="uid://caa03tjf508fb" path="res://sub_box.tscn" id="2_ct837"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_unt3n"]
+border_color = Color(0.10142777, 0.16588518, 0.34954965, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="Theme" id="Theme_unt3n"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_unt3n")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3qm7i"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(0.99637383, 0.71688837, 0.7177996, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+
+[sub_resource type="SystemFont" id="SystemFont_unt3n"]
+font_names = PackedStringArray("Trebuchet MS")
+
+[sub_resource type="DPITexture" id="DPITexture_unt3n"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#fff\" fill-opacity=\".75\" rx=\"2.333\"/><path fill=\"#1a1a1a\" d=\"m11.5 3.75-5.6 5.6-1.7-1.7-1.5 1.5 3.2 3.2 7.1-7.1z\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_3qm7i"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#fff\" fill-opacity=\".37\" rx=\"2.333\"/><path fill=\"#1a1a1a\" fill-opacity=\".5\" d=\"m11.5 3.75-5.6 5.6-1.7-1.7-1.5 1.5 3.2 3.2 7.1-7.1z\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_ct837"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"5.5\" fill=\"#1a1a1a\" stroke=\"#fff\" stroke-opacity=\".75\" stroke-width=\"3\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_dvyfb"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fff\" fill-opacity=\".37\"/><circle cx=\"8\" cy=\"8\" r=\"4\" fill=\"#1a1a1a\" fill-opacity=\".5\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_ep223"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#1a1a1a\" fill-opacity=\".5\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_ic7pc"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#1a1a1a\" fill-opacity=\".25\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_m42n4"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#1a1a1a\" fill-opacity=\".5\" rx=\"2.333\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_ijt1t"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#1a1a1a\" fill-opacity=\".25\" rx=\"2.333\"/></svg>
+"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chb2k"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0oce6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.3953141, 0.79316443, 0.5938237, 0.7490196)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="Theme" id="Theme_i6wfe"]
+CheckBox/colors/checkbox_checked_color = Color(1, 1, 1, 1)
+CheckBox/colors/checkbox_unchecked_color = Color(1, 1, 1, 1)
+CheckBox/colors/font_color = Color(0, 0, 0, 1)
+CheckBox/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+CheckBox/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+CheckBox/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+CheckBox/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+CheckBox/colors/font_outline_color = Color(0, 0, 0, 1)
+CheckBox/colors/font_pressed_color = Color(1, 1, 1, 1)
+CheckBox/constants/check_v_offset = 0
+CheckBox/constants/h_separation = 4
+CheckBox/font_sizes/font_size = 12
+CheckBox/fonts/font = SubResource("SystemFont_unt3n")
+CheckBox/icons/checked = SubResource("DPITexture_unt3n")
+CheckBox/icons/checked_disabled = SubResource("DPITexture_3qm7i")
+CheckBox/icons/radio_checked = SubResource("DPITexture_ct837")
+CheckBox/icons/radio_checked_disabled = SubResource("DPITexture_dvyfb")
+CheckBox/icons/radio_unchecked = SubResource("DPITexture_ep223")
+CheckBox/icons/radio_unchecked_disabled = SubResource("DPITexture_ic7pc")
+CheckBox/icons/unchecked = SubResource("DPITexture_m42n4")
+CheckBox/icons/unchecked_disabled = SubResource("DPITexture_ijt1t")
+CheckBox/styles/disabled = SubResource("StyleBoxEmpty_chb2k")
+CheckBox/styles/focus = SubResource("StyleBoxFlat_0oce6")
+CheckBox/styles/hover = SubResource("StyleBoxEmpty_chb2k")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_chb2k")
+CheckBox/styles/normal = SubResource("StyleBoxEmpty_chb2k")
+CheckBox/styles/pressed = SubResource("StyleBoxEmpty_chb2k")
+
+[sub_resource type="SystemFont" id="SystemFont_fondj"]
+font_names = PackedStringArray("Trebuchet MS")
+
+[sub_resource type="DPITexture" id="DPITexture_chb2k"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#fff\" fill-opacity=\".75\" rx=\"2.333\"/><path fill=\"#1a1a1a\" d=\"m11.5 3.75-5.6 5.6-1.7-1.7-1.5 1.5 3.2 3.2 7.1-7.1z\"/></svg>
+"
+base_scale = 2.0
+
+[sub_resource type="DPITexture" id="DPITexture_pono2"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#1a1a1a\" fill-opacity=\".5\" rx=\"2.333\"/></svg>
+"
+base_scale = 2.0
+
+[sub_resource type="DPITexture" id="DPITexture_kfkoa"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#1a1a1a\" fill-opacity=\".25\" rx=\"2.333\"/></svg>
+"
+base_scale = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ct837"]
+bg_color = Color(0.14901961, 0.14901961, 0.14901961, 0)
+border_color = Color(0.10142777, 0.16588518, 0.34954965, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_3qm7i"]
+font_names = PackedStringArray("Trebuchet MS")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dvyfb"]
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.26666668, 0.92156863, 0.60784316, 0.6901961)
+border_color = Color(0.32213843, 0.9421897, 0.42270005, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+
+[sub_resource type="SystemFont" id="SystemFont_ct837"]
+font_names = PackedStringArray("Trebuchet MS")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ep223"]
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.8619526, 0.30629802, 0.158306, 0.6)
+border_color = Color(0.78920805, 0.36370143, 0.24896845, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+
+[node name="TaskContainer" type="VBoxContainer"]
+custom_minimum_size = Vector2(375, 50)
+offset_right = 375.0
+offset_bottom = 75.0
+theme_override_constants/separation = 10
+alignment = 1
+script = ExtResource("1_3qm7i")
+sub_box_scene = ExtResource("2_ct837")
+
+[node name="Layout" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_unt3n")
+theme_override_styles/panel = SubResource("StyleBoxFlat_3qm7i")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Layout"]
+layout_mode = 2
+
+[node name="Task" type="VBoxContainer" parent="Layout/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 1.5
+
+[node name="HeadTask" type="HBoxContainer" parent="Layout/HBoxContainer/Task"]
+layout_mode = 2
+
+[node name="TopBox" type="CheckBox" parent="Layout/HBoxContainer/Task/HeadTask"]
+layout_mode = 2
+theme = SubResource("Theme_i6wfe")
+theme_override_fonts/font = SubResource("SystemFont_fondj")
+theme_override_font_sizes/font_size = 24
+theme_override_icons/checked = SubResource("DPITexture_chb2k")
+theme_override_icons/unchecked = SubResource("DPITexture_pono2")
+theme_override_icons/unchecked_disabled = SubResource("DPITexture_kfkoa")
+text = "Task Heading"
+
+[node name="SubTasks" type="VBoxContainer" parent="Layout/HBoxContainer/Task"]
+layout_mode = 2
+
+[node name="ButtonLayout" type="PanelContainer" parent="Layout/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ct837")
+
+[node name="ButtonContainer" type="VBoxContainer" parent="Layout/HBoxContainer/ButtonLayout"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="EditButton" type="Button" parent="Layout/HBoxContainer/ButtonLayout/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_3qm7i")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_dvyfb")
+text = "Edit Task"
+
+[node name="DeleteButton" type="Button" parent="Layout/HBoxContainer/ButtonLayout/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_ct837")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_ep223")
+text = "Delete Task"
+
+[connection signal="pressed" from="Layout/HBoxContainer/Task/HeadTask/TopBox" to="." method="_on_top_box_pressed"]
+[connection signal="pressed" from="Layout/HBoxContainer/ButtonLayout/ButtonContainer/EditButton" to="." method="_on_edit_button_pressed"]
+[connection signal="pressed" from="Layout/HBoxContainer/ButtonLayout/ButtonContainer/DeleteButton" to="." method="_on_delete_button_pressed"]
