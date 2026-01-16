@@ -1,0 +1,171 @@
+[gd_scene load_steps=18 format=3 uid="uid://cnv60oa1mk6ht"]
+
+[ext_resource type="Script" uid="uid://bcedudnlcs0io" path="res://scenes/login_screen.gd" id="1_frse4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8ckn"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_8q002"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_e8ckn")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhqwn"]
+bg_color = Color(0.9647059, 0.9372549, 0.972549, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Theme" id="Theme_kcwbp"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_mhqwn")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtwsp"]
+bg_color = Color(0.54509807, 0.8901961, 0.9529412, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+
+[sub_resource type="Theme" id="Theme_xqvf2"]
+Panel/styles/panel = SubResource("StyleBoxFlat_dtwsp")
+
+[sub_resource type="SystemFont" id="SystemFont_5m8ma"]
+font_names = PackedStringArray("Trebuchet MS")
+
+[sub_resource type="SystemFont" id="SystemFont_l756y"]
+font_names = PackedStringArray("Trebuchet MS")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qeenl"]
+bg_color = Color(0.3473191, 0.6134973, 0.18689471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmc67"]
+bg_color = Color(0.5764706, 0.972549, 0.34509805, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_navmr"]
+bg_color = Color(0.7621884, 0.9906331, 0.6538291, 1)
+
+[sub_resource type="Theme" id="Theme_bmn8x"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/styles/hover = SubResource("StyleBoxFlat_qeenl")
+Button/styles/normal = SubResource("StyleBoxFlat_cmc67")
+Button/styles/pressed = SubResource("StyleBoxFlat_navmr")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6jw0y"]
+bg_color = Color(0.09865237, 0.5968684, 0.6707297, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ph3x0"]
+bg_color = Color(0.4, 0.9607843, 0.8784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16hpu"]
+bg_color = Color(0.6737209, 0.982089, 0.9544676, 1)
+
+[sub_resource type="Theme" id="Theme_6gsg0"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/styles/hover = SubResource("StyleBoxFlat_6jw0y")
+Button/styles/normal = SubResource("StyleBoxFlat_ph3x0")
+Button/styles/pressed = SubResource("StyleBoxFlat_16hpu")
+
+[node name="LoginScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_frse4")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="App" type="PanelContainer" parent="Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_8q002")
+
+[node name="LoginView" type="PanelContainer" parent="Layout/App"]
+custom_minimum_size = Vector2(300, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_kcwbp")
+
+[node name="LoginSubLayout" type="VBoxContainer" parent="Layout/App/LoginView"]
+layout_mode = 2
+
+[node name="Header" type="PanelContainer" parent="Layout/App/LoginView/LoginSubLayout"]
+layout_mode = 2
+
+[node name="HeaderPanel" type="Panel" parent="Layout/App/LoginView/LoginSubLayout/Header"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme = SubResource("Theme_xqvf2")
+
+[node name="Heading" type="Label" parent="Layout/App/LoginView/LoginSubLayout/Header"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_5m8ma")
+theme_override_font_sizes/font_size = 36
+text = "LOGIN"
+horizontal_alignment = 1
+
+[node name="DetailLayout" type="VBoxContainer" parent="Layout/App/LoginView/LoginSubLayout"]
+custom_minimum_size = Vector2(275, 250)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="UserNameEntry" type="HBoxContainer" parent="Layout/App/LoginView/LoginSubLayout/DetailLayout"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+
+[node name="UserNameLabel" type="Label" parent="Layout/App/LoginView/LoginSubLayout/DetailLayout/UserNameEntry"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_l756y")
+text = "Username: "
+
+[node name="UserNameEntry" type="LineEdit" parent="Layout/App/LoginView/LoginSubLayout/DetailLayout/UserNameEntry"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Layout/App/LoginView/LoginSubLayout/DetailLayout"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+
+[node name="PasswordLabel" type="Label" parent="Layout/App/LoginView/LoginSubLayout/DetailLayout/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_l756y")
+text = "Password: "
+
+[node name="PasswordEntry" type="LineEdit" parent="Layout/App/LoginView/LoginSubLayout/DetailLayout/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="ButtonLayout" type="VBoxContainer" parent="Layout/App/LoginView/LoginSubLayout"]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="SignInButton" type="Button" parent="Layout/App/LoginView/LoginSubLayout/ButtonLayout"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_bmn8x")
+text = "Sign-In"
+
+[node name="RegisterButton" type="Button" parent="Layout/App/LoginView/LoginSubLayout/ButtonLayout"]
+custom_minimum_size = Vector2(250, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_6gsg0")
+text = "New? Register Account"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

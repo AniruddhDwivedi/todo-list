@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bju3gt00yqv00"]
 
-[ext_resource type="Script" uid="uid://tdtyhaaor47c" path="res://subtask_entry.gd" id="1_eva00"]
+[ext_resource type="Script" uid="uid://tdtyhaaor47c" path="res://scripts/subtask_entry.gd" id="1_eva00"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qptvr"]
 content_margin_left = 0.0

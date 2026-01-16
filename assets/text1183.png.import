@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbtseb02yfm3s"
-path="res://.godot/imported/Todo List.icon.png-a395f57cd4bdadc1909d97b3f6c7f257.ctex"
+uid="uid://capea3s1f7dim"
+path="res://.godot/imported/text1183.png-edda3a62b48bd51c8c1f6ceb03e809a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Todo List.icon.png"
-dest_files=["res://.godot/imported/Todo List.icon.png-a395f57cd4bdadc1909d97b3f6c7f257.ctex"]
+source_file="res://assets/text1183.png"
+dest_files=["res://.godot/imported/text1183.png-edda3a62b48bd51c8c1f6ceb03e809a9.ctex"]
 
 [params]
 
