@@ -11,13 +11,20 @@ config_version=5
 [application]
 
 config/name="Todo List"
-config/description="This is a to-do list app for the web."
-run/main_scene="uid://7rdnqfm28men"
+config/description="This is a to-do list app."
+config/version="1.0"
+run/main_scene="uid://cu3xrbirm0dv8"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-boot_splash/bg_color=Color(0.8089983, 0.8089983, 0.8089982, 1)
+boot_splash/bg_color=Color(8.426323, 11.780045, 10.534377, 1)
 boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
+config/icon="uid://bxok8rv3cdwfc"
+
+[autoload]
+
+supabase="*res://autoloads/supabase.gd"
+SceneSwitcher="*res://autoloads/SceneSwitcher.gd"
 
 [display]
 

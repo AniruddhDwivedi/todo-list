@@ -1,0 +1,89 @@
+[gd_scene load_steps=11 format=3 uid="uid://bqh75d0lt1ee7"]
+
+[ext_resource type="Script" uid="uid://d02kdx6b16eph" path="res://scenes/failure_dialog.gd" id="1_y61pn"]
+
+[sub_resource type="SystemFont" id="SystemFont_tpvhn"]
+font_names = PackedStringArray("Trebuchet MS")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xv05d"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.9779369, 0.97793704, 0.9779369, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 15.0
+expand_margin_top = 30.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8wxty"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_xv05d"]
+AcceptDialog/colors/title_color = Color(1, 1, 1, 1)
+AcceptDialog/colors/title_outline_modulate = Color(0, 0, 0, 1)
+AcceptDialog/constants/buttons_min_height = 0
+AcceptDialog/constants/buttons_min_width = 250
+AcceptDialog/constants/buttons_separation = 10
+AcceptDialog/font_sizes/title_font_size = 24
+AcceptDialog/fonts/title_font = SubResource("SystemFont_tpvhn")
+AcceptDialog/icons/close = null
+AcceptDialog/icons/close_pressed = null
+AcceptDialog/styles/embedded_border = SubResource("StyleBoxFlat_xv05d")
+AcceptDialog/styles/panel = SubResource("StyleBoxFlat_8wxty")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fe7i"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_4ximj"]
+font_names = PackedStringArray("Trebuchet MS")
+subpixel_positioning = 0
+
+[sub_resource type="Theme" id="Theme_r1cj2"]
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/font_sizes/font_size = 16
+Label/fonts/font = SubResource("SystemFont_4ximj")
+
+[sub_resource type="SystemFont" id="SystemFont_yth1a"]
+font_names = PackedStringArray("Trebuchet MS")
+subpixel_positioning = 0
+
+[sub_resource type="Theme" id="Theme_l71bk"]
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/font_sizes/font_size = 20
+Label/fonts/font = SubResource("SystemFont_yth1a")
+
+[node name="AcceptDialog" type="AcceptDialog"]
+oversampling_override = 1.0
+title = "Error"
+initial_position = 1
+size = Vector2i(310, 200)
+visible = true
+theme = SubResource("Theme_xv05d")
+theme_override_styles/panel = SubResource("StyleBoxFlat_6fe7i")
+ok_button_text = "Retry"
+script = ExtResource("1_y61pn")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+offset_right = 310.0
+offset_bottom = 159.0
+
+[node name="NameLabel" type="Label" parent="Layout"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme = SubResource("Theme_r1cj2")
+text = "Login failed"
+vertical_alignment = 1
+
+[node name="AccompanyingText" type="Label" parent="Layout"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme = SubResource("Theme_l71bk")
+text = "Username or Password is incorrect"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="canceled" from="." to="." method="_on_canceled"]
+[connection signal="confirmed" from="." to="." method="_on_confirmed"]

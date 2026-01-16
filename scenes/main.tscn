@@ -1,0 +1,233 @@
+[gd_scene load_steps=23 format=3 uid="uid://cu3xrbirm0dv8"]
+
+[sub_resource type="GDScript" id="GDScript_sgp6g"]
+script/source = "extends Control
+
+@onready var register_button = $App/Layout/ButtonLayout/RegisterButtonField/RegisterButton
+@onready var login_button = $App/Layout/ButtonLayout/LoginButtonField/LoginButton
+@onready var exit_button = $App/Layout/ExitButtonContainer/ExitButton
+
+@onready var login_scene = \"res://scenes/login_screen.tscn\"
+@onready var register_scene = \"res://scenes/register_screen.tscn\"
+
+func _ready() -> void:
+	register_button.pressed.connect(_on_register_button_pressed)
+	login_button.pressed.connect(_on_login_button_pressed)
+	exit_button.pressed.connect(exit_sequence)
+
+func exit_sequence():
+	get_tree().quit()
+
+func _on_register_button_pressed() -> void:
+	SceneSwitcher.change_scene(register_scene)
+
+func _on_login_button_pressed() -> void:
+	SceneSwitcher.change_scene(login_scene)
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wfyh"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_sugp2"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_0wfyh")
+
+[sub_resource type="SystemFont" id="SystemFont_jyhfs"]
+font_names = PackedStringArray("Trebuchet MS")
+
+[sub_resource type="Theme" id="Theme_tbgi4"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 54
+Label/fonts/font = SubResource("SystemFont_jyhfs")
+
+[sub_resource type="SystemFont" id="SystemFont_tefeu"]
+font_names = PackedStringArray("Trebuchet MS")
+
+[sub_resource type="Theme" id="Theme_o6xl0"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 24
+Label/fonts/font = SubResource("SystemFont_tefeu")
+
+[sub_resource type="SystemFont" id="SystemFont_o5qli"]
+font_names = PackedStringArray("Trebuchet MS")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tipki"]
+bg_color = Color(0.8195433, 0.22636914, 0.85439944, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85g3d"]
+bg_color = Color(0.96403617, 0.78173655, 0.9701516, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_choun"]
+bg_color = Color(0.9787863, 0.8667477, 0.98020965, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Theme" id="Theme_ya4ey"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 36
+Button/fonts/font = SubResource("SystemFont_o5qli")
+Button/styles/hover = SubResource("StyleBoxFlat_tipki")
+Button/styles/normal = SubResource("StyleBoxFlat_85g3d")
+Button/styles/pressed = SubResource("StyleBoxFlat_choun")
+
+[sub_resource type="SystemFont" id="SystemFont_0wfyh"]
+font_names = PackedStringArray("Trebuchet MS")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sugp2"]
+bg_color = Color(0.8195433, 0.22636914, 0.85439944, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyhfs"]
+bg_color = Color(0.96403617, 0.78173655, 0.9701516, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbgi4"]
+bg_color = Color(0.9787863, 0.8667477, 0.98020965, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Theme" id="Theme_tefeu"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 36
+Button/fonts/font = SubResource("SystemFont_0wfyh")
+Button/styles/hover = SubResource("StyleBoxFlat_sugp2")
+Button/styles/normal = SubResource("StyleBoxFlat_jyhfs")
+Button/styles/pressed = SubResource("StyleBoxFlat_tbgi4")
+
+[sub_resource type="SystemFont" id="SystemFont_o6xl0"]
+font_names = PackedStringArray("Trebuchet MS")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ya4ey"]
+bg_color = Color(0.81960785, 0.22745098, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eb6dy"]
+bg_color = Color(0.9647059, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trceg"]
+bg_color = Color(1, 0.6620945, 0.6093973, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Theme" id="Theme_a8y0u"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0.12225223, 0.12225223, 0.12225223, 1)
+Button/font_sizes/font_size = 40
+Button/fonts/font = SubResource("SystemFont_o6xl0")
+Button/styles/hover = SubResource("StyleBoxFlat_ya4ey")
+Button/styles/normal = SubResource("StyleBoxFlat_eb6dy")
+Button/styles/pressed = SubResource("StyleBoxFlat_trceg")
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_sgp6g")
+
+[node name="App" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_sugp2")
+
+[node name="Layout" type="VBoxContainer" parent="App"]
+layout_mode = 2
+
+[node name="Header" type="VBoxContainer" parent="App/Layout"]
+layout_mode = 2
+
+[node name="Heading" type="Label" parent="App/Layout/Header"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme = SubResource("Theme_tbgi4")
+text = "To-Do List App"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonLayout" type="VBoxContainer" parent="App/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LoginButtonField" type="HBoxContainer" parent="App/Layout/ButtonLayout"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="LoginLabel" type="Label" parent="App/Layout/ButtonLayout/LoginButtonField"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme = SubResource("Theme_o6xl0")
+text = "Existing User: "
+
+[node name="LoginButton" type="Button" parent="App/Layout/ButtonLayout/LoginButtonField"]
+custom_minimum_size = Vector2(150, 75)
+layout_mode = 2
+size_flags_horizontal = 10
+theme = SubResource("Theme_ya4ey")
+text = "Login"
+
+[node name="RegisterButtonField" type="HBoxContainer" parent="App/Layout/ButtonLayout"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RegisterLabel" type="Label" parent="App/Layout/ButtonLayout/RegisterButtonField"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_o6xl0")
+text = "New User: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RegisterButton" type="Button" parent="App/Layout/ButtonLayout/RegisterButtonField"]
+custom_minimum_size = Vector2(150, 75)
+layout_mode = 2
+size_flags_horizontal = 10
+theme = SubResource("Theme_tefeu")
+text = "Register"
+
+[node name="ExitButtonContainer" type="HBoxContainer" parent="App/Layout"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="ExitButton" type="Button" parent="App/Layout/ExitButtonContainer"]
+custom_minimum_size = Vector2(375, 75)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme = SubResource("Theme_a8y0u")
+text = "Close App"

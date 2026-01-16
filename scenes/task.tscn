@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=3 uid="uid://bqpc75byt6xel"]
 
-[ext_resource type="Script" uid="uid://bkot05uaqnbtc" path="res://task.gd" id="1_3qm7i"]
-[ext_resource type="PackedScene" uid="uid://caa03tjf508fb" path="res://sub_box.tscn" id="2_ct837"]
+[ext_resource type="Script" uid="uid://bkot05uaqnbtc" path="res://scripts/task.gd" id="1_3qm7i"]
+[ext_resource type="PackedScene" uid="uid://caa03tjf508fb" path="res://scenes/sub_box.tscn" id="2_ct837"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_unt3n"]
 border_color = Color(0.10142777, 0.16588518, 0.34954965, 1)
@@ -24,6 +24,7 @@ shadow_size = 5
 
 [sub_resource type="SystemFont" id="SystemFont_unt3n"]
 font_names = PackedStringArray("Trebuchet MS")
+subpixel_positioning = 0
 
 [sub_resource type="DPITexture" id="DPITexture_unt3n"]
 _source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#fff\" fill-opacity=\".75\" rx=\"2.333\"/><path fill=\"#1a1a1a\" d=\"m11.5 3.75-5.6 5.6-1.7-1.7-1.5 1.5 3.2 3.2 7.1-7.1z\"/></svg>
@@ -93,7 +94,7 @@ CheckBox/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
 CheckBox/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 CheckBox/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 CheckBox/colors/font_outline_color = Color(0, 0, 0, 1)
-CheckBox/colors/font_pressed_color = Color(1, 1, 1, 1)
+CheckBox/colors/font_pressed_color = Color(0, 0, 0, 1)
 CheckBox/constants/check_v_offset = 0
 CheckBox/constants/h_separation = 4
 CheckBox/font_sizes/font_size = 12
@@ -115,6 +116,7 @@ CheckBox/styles/pressed = SubResource("StyleBoxEmpty_chb2k")
 
 [sub_resource type="SystemFont" id="SystemFont_fondj"]
 font_names = PackedStringArray("Trebuchet MS")
+subpixel_positioning = 0
 
 [sub_resource type="DPITexture" id="DPITexture_chb2k"]
 _source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#fff\" fill-opacity=\".75\" rx=\"2.333\"/><path fill=\"#1a1a1a\" d=\"m11.5 3.75-5.6 5.6-1.7-1.7-1.5 1.5 3.2 3.2 7.1-7.1z\"/></svg>
@@ -137,6 +139,7 @@ border_color = Color(0.10142777, 0.16588518, 0.34954965, 1)
 
 [sub_resource type="SystemFont" id="SystemFont_3qm7i"]
 font_names = PackedStringArray("Trebuchet MS")
+subpixel_positioning = 0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dvyfb"]
 content_margin_top = 4.0
@@ -151,6 +154,7 @@ corner_detail = 5
 
 [sub_resource type="SystemFont" id="SystemFont_ct837"]
 font_names = PackedStringArray("Trebuchet MS")
+subpixel_positioning = 0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ep223"]
 content_margin_top = 4.0

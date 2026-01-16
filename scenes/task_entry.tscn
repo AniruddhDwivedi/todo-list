@@ -1,8 +1,7 @@
-[gd_scene load_steps=39 format=4 uid="uid://dxfrxdrmuoneg"]
+[gd_scene load_steps=38 format=4 uid="uid://dxfrxdrmuoneg"]
 
-[ext_resource type="Script" uid="uid://0xbpvgsxrq5e" path="res://task_entry.gd" id="1_hneat"]
-[ext_resource type="PackedScene" uid="uid://bju3gt00yqv00" path="res://subtask_entry.tscn" id="2_ucyi0"]
-[ext_resource type="Resource" uid="uid://c21m58v1ciiv7" path="res://data.tres" id="3_rvemr"]
+[ext_resource type="Script" uid="uid://0xbpvgsxrq5e" path="res://scripts/task_entry.gd" id="1_hneat"]
+[ext_resource type="PackedScene" uid="uid://bju3gt00yqv00" path="res://scenes/subtask_entry.tscn" id="2_ucyi0"]
 
 [sub_resource type="Image" id="Image_1rr46"]
 data = {
@@ -3299,7 +3298,6 @@ theme_override_fonts/title_font = SubResource("SystemFont_pu5qs")
 theme_override_font_sizes/title_font_size = 16
 script = ExtResource("1_hneat")
 subtask_entry = ExtResource("2_ucyi0")
-task_data_resource = ExtResource("3_rvemr")
 
 [node name="Layout" type="VBoxContainer" parent="."]
 anchors_preset = 15

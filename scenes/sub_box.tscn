@@ -1,8 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://caa03tjf508fb"]
 
-[ext_resource type="Script" uid="uid://qlts5rvciurq" path="res://sub_box.gd" id="1_i18hk"]
+[ext_resource type="Script" uid="uid://qlts5rvciurq" path="res://scripts/sub_box.gd" id="1_i18hk"]
 
 [sub_resource type="Theme" id="Theme_3qm7i"]
+CheckBox/colors/font_color = Color(0, 0, 0, 1)
+CheckBox/colors/font_pressed_color = Color(0, 0, 0, 1)
 
 [node name="SubBox" type="CheckBox"]
 theme = SubResource("Theme_3qm7i")
